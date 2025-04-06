@@ -1,34 +1,23 @@
 import { useState } from "react";
 
+// https://nodejs.org/api/packages.html#packages_self_referencing_a_package_using_its_name
+import { Button, QuizForm, Container } from "clue-hunt-ui";
+import { questionSetOne } from "./quizSets";
+
 import "./App.css";
 
-// https://nodejs.org/api/packages.html#packages_self_referencing_a_package_using_its_name
-import { Button, Label, Input } from "clue-hunt-ui";
-
 function App() {
-  const [count, setCount] = useState(0);
-  const [inputCustomCountValue, setInputCustomCountValue] = useState("");
+  const [isLocked, setIsLocked] = useState(true);
 
-  const handleClickCustomCount = () => {
-    if (inputCustomCountValue === "") {
-      setCount((count) => count + 1);
-    } else {
-      setCount(Number(inputCustomCountValue));
-    }
+  const handleToggle = () => {
+    setIsLocked(!isLocked);
   };
 
   return (
-    <>
-      <Label>My Label</Label>
-      <br />
-      <Input
-        placeholder="Custom count"
-        value={inputCustomCountValue}
-        onChange={(e) => setInputCustomCountValue(e.target.value)}
-      />
-      <br />
-      <Button onClick={handleClickCustomCount}>count is {count}</Button>
-    </>
+    <Container>
+      <Button label="Count" primary={isLocked} isLocked={isLocked} />
+      <QuizForm questions={questionSetOne} onClick={handleToggle} />
+    </Container>
   );
 }
 
