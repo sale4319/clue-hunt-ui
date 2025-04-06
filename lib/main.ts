@@ -1,3 +1,3 @@
 export { Button } from "./components/Button";
-export { Input } from "./components/Input";
+export { default as QuizForm } from "./components/QuizForm";
 export { Label } from "./components/Label";
