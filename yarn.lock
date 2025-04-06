@@ -343,11 +343,29 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@clue-hunt-ui/question-icon-tooltip@workspace:lib/components/QuestionIconToolTip":
+  version: 0.0.0-use.local
+  resolution: "@clue-hunt-ui/question-icon-tooltip@workspace:lib/components/QuestionIconToolTip"
+  languageName: unknown
+  linkType: soft
+
 "@clue-hunt-ui/quiz-form@workspace:lib/components/QuizForm":
   version: 0.0.0-use.local
   resolution: "@clue-hunt-ui/quiz-form@workspace:lib/components/QuizForm"
   dependencies:
     "@clue-hunt-ui/button": "npm:^0.1.0"
+  languageName: unknown
+  linkType: soft
+
+"@clue-hunt-ui/sumit-button@workspace:lib/components/SubmitButton":
+  version: 0.0.0-use.local
+  resolution: "@clue-hunt-ui/sumit-button@workspace:lib/components/SubmitButton"
+  languageName: unknown
+  linkType: soft
+
+"@clue-hunt-ui/unlock-tooltip@workspace:lib/components/UnlockToolTip":
+  version: 0.0.0-use.local
+  resolution: "@clue-hunt-ui/unlock-tooltip@workspace:lib/components/UnlockToolTip"
   languageName: unknown
   linkType: soft
 

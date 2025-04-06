@@ -3,4 +3,7 @@ export { Container } from "./components/Container";
 export { GalaxyBackground } from "./components/GalaxyBackground";
 export { MobileWarning } from "./components/MobileWarning";
 export { PageNotFound } from "./components/PageNotFound";
+export { QuestionIconToolTip } from "./components/QuestionIconToolTip";
 export { QuizForm } from "./components/QuizForm";
+export { SubmitButton } from "./components/SubmitButton";
+export { UnlockToolTip } from "./components/UnlockToolTip";

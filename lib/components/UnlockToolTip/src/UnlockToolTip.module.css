@@ -1,0 +1,41 @@
+.tooltipButton {
+  background: transparent;
+  padding: 0px;
+  border: none;
+}
+
+.tooltipButton::selection {
+  background: transparent;
+}
+
+.tooltipContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #61dafb;
+  color: white;
+  text-align: center;
+  padding: 7px;
+  border-radius: 6px;
+  max-width: 120px;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #61dafb transparent transparent transparent;
+}
