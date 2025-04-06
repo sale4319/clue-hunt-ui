@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from "react";
 import messages from "./messages.json";
-import { Button } from "../Button";
+import { Button } from "@clue-hunt-ui/button";
 
 import styles from "./styles.module.css";
 
