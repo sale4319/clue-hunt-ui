@@ -317,6 +317,32 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@clue-hunt-ui/container@workspace:lib/components/Container":
+  version: 0.0.0-use.local
+  resolution: "@clue-hunt-ui/container@workspace:lib/components/Container"
+  dependencies:
+    "@clue-hunt-ui/galaxy-background": "npm:^0.1.0"
+  languageName: unknown
+  linkType: soft
+
+"@clue-hunt-ui/galaxy-background@npm:^0.1.0, @clue-hunt-ui/galaxy-background@workspace:lib/components/GalaxyBackground":
+  version: 0.0.0-use.local
+  resolution: "@clue-hunt-ui/galaxy-background@workspace:lib/components/GalaxyBackground"
+  languageName: unknown
+  linkType: soft
+
+"@clue-hunt-ui/mobile-warning@workspace:lib/components/MobileWarning":
+  version: 0.0.0-use.local
+  resolution: "@clue-hunt-ui/mobile-warning@workspace:lib/components/MobileWarning"
+  languageName: unknown
+  linkType: soft
+
+"@clue-hunt-ui/page-not-found@workspace:lib/components/PageNotFound":
+  version: 0.0.0-use.local
+  resolution: "@clue-hunt-ui/page-not-found@workspace:lib/components/PageNotFound"
+  languageName: unknown
+  linkType: soft
+
 "@clue-hunt-ui/quiz-form@workspace:lib/components/QuizForm":
   version: 0.0.0-use.local
   resolution: "@clue-hunt-ui/quiz-form@workspace:lib/components/QuizForm"

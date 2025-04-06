@@ -181,7 +181,7 @@ const QuizForm: React.FC<QuizProps> = ({ questions = [], handleUnlock }) => {
       ) : (
         <Fragment>
           <ProgressBar
-            currentQuestionIndex={questionIndex + 1}
+            currentQuestionIndex={questionIndex}
             totalQuestionsCount={questions?.length || 0}
           />
           <Question
