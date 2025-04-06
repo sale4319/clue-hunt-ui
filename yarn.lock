@@ -357,9 +357,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@clue-hunt-ui/spacer-element@workspace:lib/components/SpacerElement":
+  version: 0.0.0-use.local
+  resolution: "@clue-hunt-ui/spacer-element@workspace:lib/components/SpacerElement"
+  languageName: unknown
+  linkType: soft
+
 "@clue-hunt-ui/sumit-button@workspace:lib/components/SubmitButton":
   version: 0.0.0-use.local
   resolution: "@clue-hunt-ui/sumit-button@workspace:lib/components/SubmitButton"
+  languageName: unknown
+  linkType: soft
+
+"@clue-hunt-ui/title@workspace:lib/components/Title":
+  version: 0.0.0-use.local
+  resolution: "@clue-hunt-ui/title@workspace:lib/components/Title"
+  languageName: unknown
+  linkType: soft
+
+"@clue-hunt-ui/unlock-button@workspace:lib/components/UnlockButton":
+  version: 0.0.0-use.local
+  resolution: "@clue-hunt-ui/unlock-button@workspace:lib/components/UnlockButton"
   languageName: unknown
   linkType: soft
 

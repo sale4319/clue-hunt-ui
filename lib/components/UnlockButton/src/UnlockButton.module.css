@@ -1,0 +1,11 @@
+.unlockButton {
+  background: transparent;
+  color: transparent;
+  border: none;
+  border-radius: 9px;
+  padding: 3px;
+}
+
+.unlockButton::selection {
+  background: transparent;
+}

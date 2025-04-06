@@ -5,5 +5,8 @@ export { MobileWarning } from "./components/MobileWarning";
 export { PageNotFound } from "./components/PageNotFound";
 export { QuestionIconToolTip } from "./components/QuestionIconToolTip";
 export { QuizForm } from "./components/QuizForm";
+export { SpacerElement } from "./components/SpacerElement";
 export { SubmitButton } from "./components/SubmitButton";
+export { Title } from "./components/Title";
+export { UnlockButton } from "./components/UnlockButton";
 export { UnlockToolTip } from "./components/UnlockToolTip";
