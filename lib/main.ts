@@ -1,3 +1,4 @@
+export { AppMenu } from "./components/AppMenu";
 export { Button } from "./components/Button";
 export { Container } from "./components/Container";
 export { GalaxyBackground } from "./components/GalaxyBackground";

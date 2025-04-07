@@ -2,12 +2,13 @@ import { useState } from "react";
 
 // https://nodejs.org/api/packages.html#packages_self_referencing_a_package_using_its_name
 import {
+  AppMenu,
   Button,
   QuizForm,
   Container,
-  QuestionIconToolTip,
   UnlockToolTip,
   SubmitButton,
+  QuestionIconToolTip,
 } from "clue-hunt-ui";
 import { questionSetOne } from "./quizSets";
 
@@ -22,7 +23,8 @@ function App() {
 
   return (
     <Container>
-      <QuestionIconToolTip />
+      <AppMenu />
+      <QuestionIconToolTip size="large" />
       <UnlockToolTip />
       <SubmitButton label="Submit" />
       <Button label="Count" primary={isLocked} isLocked={isLocked} />
