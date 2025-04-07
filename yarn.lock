@@ -311,6 +311,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@clue-hunt-ui/app-menu@workspace:lib/components/AppMenu":
+  version: 0.0.0-use.local
+  resolution: "@clue-hunt-ui/app-menu@workspace:lib/components/AppMenu"
+  languageName: unknown
+  linkType: soft
+
 "@clue-hunt-ui/button@npm:^0.1.0, @clue-hunt-ui/button@workspace:lib/components/Button":
   version: 0.0.0-use.local
   resolution: "@clue-hunt-ui/button@workspace:lib/components/Button"
@@ -354,6 +360,12 @@ __metadata:
   resolution: "@clue-hunt-ui/quiz-form@workspace:lib/components/QuizForm"
   dependencies:
     "@clue-hunt-ui/button": "npm:^0.1.0"
+  languageName: unknown
+  linkType: soft
+
+"@clue-hunt-ui/skip-button@workspace:lib/components/SkipButton":
+  version: 0.0.0-use.local
+  resolution: "@clue-hunt-ui/skip-button@workspace:lib/components/SkipButton"
   languageName: unknown
   linkType: soft
 

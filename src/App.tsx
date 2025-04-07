@@ -9,6 +9,7 @@ import {
   UnlockToolTip,
   SubmitButton,
   QuestionIconToolTip,
+  SkipButton,
 } from "clue-hunt-ui";
 import { questionSetOne } from "./quizSets";
 
@@ -29,6 +30,7 @@ function App() {
       <SubmitButton label="Submit" />
       <Button label="Count" primary={isLocked} isLocked={isLocked} />
       <QuizForm questions={questionSetOne} onClick={handleToggle} />
+      <SkipButton label="Skip" onClick={handleToggle} />
     </Container>
   );
 }

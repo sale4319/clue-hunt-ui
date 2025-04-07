@@ -6,6 +6,7 @@ export { MobileWarning } from "./components/MobileWarning";
 export { PageNotFound } from "./components/PageNotFound";
 export { QuestionIconToolTip } from "./components/QuestionIconToolTip";
 export { QuizForm } from "./components/QuizForm";
+export { SkipButton } from "./components/SkipButton";
 export { SpacerElement } from "./components/SpacerElement";
 export { SubmitButton } from "./components/SubmitButton";
 export { Title } from "./components/Title";
