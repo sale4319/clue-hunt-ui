@@ -29,7 +29,7 @@ export const AppMenu = ({ darkMode, toggleDarkMode }: AppMenuProps) => {
       </label>
       <a
         href={`${messages.GITHUB}`}
-        className={[styles.menuItem, mode].join(" ")}
+        className={styles.menuItem}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -37,13 +37,13 @@ export const AppMenu = ({ darkMode, toggleDarkMode }: AppMenuProps) => {
       </a>
       <a
         href={`${messages.TRELLO}`}
-        className={[styles.menuItem, mode].join(" ")}
+        className={styles.menuItem}
         target="_blank"
         rel="noopener noreferrer"
       >
         <i className={styles.trelloButton} />
       </a>
-      <div className={[styles.menuItem, mode].join(" ")}>
+      <div className={styles.menuItem}>
         <DarkModeButton toggleDarkMode={toggleDarkMode} />
       </div>
     </nav>

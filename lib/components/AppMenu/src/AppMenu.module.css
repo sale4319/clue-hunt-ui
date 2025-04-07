@@ -14,7 +14,7 @@
 }
 
 .dark {
-  background: #282c34;
+  background: #1d1f24;
 }
 
 .light {
@@ -150,16 +150,6 @@
 .trelloButton {
   background: transparent no-repeat center;
   content: url("../../assets/trello.svg");
-  background-size: 35px 35px;
-  width: 35px;
-  height: 35px;
-  border: none;
-  cursor: pointer;
-}
-
-.darkMode {
-  background: transparent no-repeat center;
-  content: url("../../assets/reactHeart.svg");
   background-size: 35px 35px;
   width: 35px;
   height: 35px;

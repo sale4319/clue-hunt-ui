@@ -7,14 +7,11 @@ interface ContainerProps {
 }
 
 export const Container = ({ children, darkMode }: ContainerProps) => {
-  const mode = darkMode ? styles.dark : styles.light;
   return (
-    <div className={[styles.container, mode].join(" ")}>
+    <div className={styles.container}>
       <GalaxyBackground darkMode={darkMode} />
-      <article className={[styles.container, mode].join(" ")}>
-        <section className={[styles.sectionContainer, mode].join(" ")}>
-          {children}
-        </section>
+      <article>
+        <section className={styles.sectionContainer}>{children}</section>
       </article>
     </div>
   );

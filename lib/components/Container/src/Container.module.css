@@ -8,12 +8,5 @@
   line-height: 34px;
   margin: auto;
   max-width: 800px;
-}
-
-.dark {
-  background: #282c34;
-}
-
-.light {
-  background: white;
+  background: transparent;
 }
