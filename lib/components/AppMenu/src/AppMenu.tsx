@@ -1,7 +1,16 @@
+'use client"';
+
+import { DarkModeButton } from "@clue-hunt-ui/dark-mode-button";
 import messages from "./messages.json";
 import styles from "./AppMenu.module.css";
 
-export const AppMenu = () => {
+type AppMenuProps = {
+  darkMode: boolean;
+  toggleDarkMode: () => void;
+};
+
+export const AppMenu = ({ darkMode, toggleDarkMode }: AppMenuProps) => {
+  const mode = darkMode ? styles.dark : styles.light;
   return (
     <nav className={styles.menu}>
       <input
@@ -11,7 +20,7 @@ export const AppMenu = () => {
         id="menu-open"
       />
       <label
-        className={[styles.menuOpenButton, styles["light"]].join(" ")}
+        className={[styles.menuOpenButton, mode].join(" ")}
         htmlFor="menu-open"
       >
         <span className={[styles.hamburger, styles.hamburger1].join(" ")} />
@@ -20,7 +29,7 @@ export const AppMenu = () => {
       </label>
       <a
         href={`${messages.GITHUB}`}
-        className={styles.menuItem}
+        className={[styles.menuItem, mode].join(" ")}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -28,15 +37,15 @@ export const AppMenu = () => {
       </a>
       <a
         href={`${messages.TRELLO}`}
-        className={styles.menuItem}
+        className={[styles.menuItem, mode].join(" ")}
         target="_blank"
         rel="noopener noreferrer"
       >
         <i className={styles.trelloButton} />
       </a>
-      <a className={styles.menuItem} target="_blank" rel="noopener noreferrer">
-        <i className={styles.darkMode} />
-      </a>
+      <div className={[styles.menuItem, mode].join(" ")}>
+        <DarkModeButton toggleDarkMode={toggleDarkMode} />
+      </div>
     </nav>
   );
 };

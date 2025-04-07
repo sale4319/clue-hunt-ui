@@ -10,12 +10,10 @@
   max-width: 800px;
 }
 
-.settings-button {
-  position: absolute;
-  top: 6%;
-  right: 5%;
-  margin-top: 0;
-  padding: 0;
-  background-color: transparent;
-  border: none;
+.dark {
+  background: #282c34;
+}
+
+.light {
+  background: white;
 }

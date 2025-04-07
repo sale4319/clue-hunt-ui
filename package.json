@@ -1,6 +1,6 @@
 {
   "name": "clue-hunt-ui",
-  "version": "0.1.6",
+  "version": "0.3.1",
   "type": "module",
   "workspaces": [
     "lib/components/*"

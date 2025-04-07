@@ -314,6 +314,8 @@ __metadata:
 "@clue-hunt-ui/app-menu@workspace:lib/components/AppMenu":
   version: 0.0.0-use.local
   resolution: "@clue-hunt-ui/app-menu@workspace:lib/components/AppMenu"
+  dependencies:
+    "@clue-hunt-ui/dark-mode-button": "npm:^0.1.0"
   languageName: unknown
   linkType: soft
 
@@ -328,6 +330,12 @@ __metadata:
   resolution: "@clue-hunt-ui/container@workspace:lib/components/Container"
   dependencies:
     "@clue-hunt-ui/galaxy-background": "npm:^0.1.0"
+  languageName: unknown
+  linkType: soft
+
+"@clue-hunt-ui/dark-mode-button@npm:^0.1.0, @clue-hunt-ui/dark-mode-button@workspace:lib/components/DarkModeButton":
+  version: 0.0.0-use.local
+  resolution: "@clue-hunt-ui/dark-mode-button@workspace:lib/components/DarkModeButton"
   languageName: unknown
   linkType: soft
 
