@@ -64,12 +64,8 @@
 
 .menu {
   position: absolute;
-  left: 5%;
-  margin-left: -80px;
-  padding-top: 20px;
-  padding-left: 80px;
-  width: 650px;
-  height: 150px;
+  left: 45px;
+  padding: 0;
   box-sizing: border-box;
   font-size: 20px;
   text-align: left;

@@ -1,0 +1,97 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  background: transparent;
+  min-width: 600px;
+  min-height: 200px;
+  padding: 20px;
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: 3%;
+  border: 2px solid;
+}
+
+.successMessage {
+  color: #75f8e2;
+  background: transparent;
+  width: 90%;
+  padding: 8px;
+  border: 1px solid;
+  margin-top: 13px;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.formLabel {
+  font-size: 19px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.light {
+  color: black;
+  border-color: #282c34;
+}
+
+.dark {
+  color: white;
+  border-color: white;
+}
+
+.formInput {
+  padding: 10px;
+  border: 1px solid #282c34;
+}
+.formInput:focus {
+  z-index: 1;
+  border-color: #282c34;
+  background-color: white;
+  box-shadow: 5px 10px 15px #61dafb;
+  outline: none;
+  transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  transition-property: color, background, width, height, margin, padding, border,
+    box-shadow;
+}
+
+.formRow {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.formInputError {
+  padding: 10px;
+  border: 1px solid;
+  border-color: red;
+  transition: 0.3s ease-in-out;
+}
+
+.formInputError:focus {
+  z-index: 1;
+  border-color: transparent;
+  background-color: white;
+  box-shadow: 5px 10px 15px red;
+  outline: none;
+  transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  transition-property: color, background, width, height, margin, padding, border,
+    box-shadow;
+}
+
+.formInputError::placeholder {
+  color: red;
+  font-family: "Audiowide", sans-serif;
+}
+
+.formInput::placeholder {
+  font-family: "Audiowide", sans-serif;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}

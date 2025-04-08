@@ -339,6 +339,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@clue-hunt-ui/dragging-puzzle@workspace:lib/components/DraggingPuzzle":
+  version: 0.0.0-use.local
+  resolution: "@clue-hunt-ui/dragging-puzzle@workspace:lib/components/DraggingPuzzle"
+  languageName: unknown
+  linkType: soft
+
 "@clue-hunt-ui/galaxy-background@npm:^0.1.0, @clue-hunt-ui/galaxy-background@workspace:lib/components/GalaxyBackground":
   version: 0.0.0-use.local
   resolution: "@clue-hunt-ui/galaxy-background@workspace:lib/components/GalaxyBackground"
@@ -354,6 +360,14 @@ __metadata:
 "@clue-hunt-ui/page-not-found@workspace:lib/components/PageNotFound":
   version: 0.0.0-use.local
   resolution: "@clue-hunt-ui/page-not-found@workspace:lib/components/PageNotFound"
+  languageName: unknown
+  linkType: soft
+
+"@clue-hunt-ui/question-form@workspace:lib/components/QuestionForm":
+  version: 0.0.0-use.local
+  resolution: "@clue-hunt-ui/question-form@workspace:lib/components/QuestionForm"
+  dependencies:
+    "@clue-hunt-ui/button": "npm:^0.1.0"
   languageName: unknown
   linkType: soft
 

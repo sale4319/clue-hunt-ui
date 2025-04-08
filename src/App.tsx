@@ -10,6 +10,7 @@ import {
   SubmitButton,
   QuestionIconToolTip,
   SkipButton,
+  QuestionForm,
 } from "clue-hunt-ui";
 import { questionSetOne } from "./quizSets";
 
@@ -23,15 +24,18 @@ function App() {
   };
 
   return (
-    <Container>
+    <>
       <AppMenu />
-      <QuestionIconToolTip size="large" />
-      <UnlockToolTip />
-      <SubmitButton label="Submit" />
-      <Button label="Count" primary={isLocked} isLocked={isLocked} />
-      <QuizForm questions={questionSetOne} onClick={handleToggle} />
-      <SkipButton label="Skip" onClick={handleToggle} />
-    </Container>
+      <Container>
+        <QuestionForm />
+        <QuestionIconToolTip size="large" />
+        <UnlockToolTip />
+        <SubmitButton label="Submit" submit />
+        <Button label="Count" primary={isLocked} isLocked={isLocked} />
+        <QuizForm questions={questionSetOne} onClick={handleToggle} />
+        <SkipButton label="Skip" onClick={handleToggle} />
+      </Container>
+    </>
   );
 }
 
