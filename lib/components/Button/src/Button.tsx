@@ -29,14 +29,26 @@ export function Button({
     ? styles[mode]
     : styles.pulse;
 
-  return (
+  const buttonStyles = [styles.primaryButton, styles[size], toggleColor].join(
+    " "
+  );
+
+  return isLocked ? (
+    <div
+      className={buttonStyles}
+      style={{ backgroundColor, cursor: "not-allowed" }}
+      {...props}
+    >
+      Locked
+    </div>
+  ) : (
     <a
       href={href}
-      className={[styles.primaryButton, styles[size], toggleColor].join(" ")}
+      className={buttonStyles}
       style={{ backgroundColor }}
       {...props}
     >
-      {isLocked ? "Locked" : isLocked === undefined ? label : "Unlocked"}
+      {label ?? "Unlocked"}
     </a>
   );
 }

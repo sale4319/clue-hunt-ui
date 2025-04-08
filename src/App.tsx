@@ -1,7 +1,17 @@
 import { useState } from "react";
 
 // https://nodejs.org/api/packages.html#packages_self_referencing_a_package_using_its_name
-import { Button, QuizForm, Container } from "clue-hunt-ui";
+import {
+  AppMenu,
+  Button,
+  QuizForm,
+  Container,
+  UnlockToolTip,
+  SubmitButton,
+  QuestionIconToolTip,
+  SkipButton,
+  QuestionForm,
+} from "clue-hunt-ui";
 import { questionSetOne } from "./quizSets";
 
 import "./App.css";
@@ -14,10 +24,18 @@ function App() {
   };
 
   return (
-    <Container>
-      <Button label="Count" primary={isLocked} isLocked={isLocked} />
-      <QuizForm questions={questionSetOne} onClick={handleToggle} />
-    </Container>
+    <>
+      <AppMenu />
+      <Container>
+        <QuestionForm />
+        <QuestionIconToolTip size="large" />
+        <UnlockToolTip />
+        <SubmitButton label="Submit" submit />
+        <Button label="Count" primary={isLocked} isLocked={isLocked} />
+        <QuizForm questions={questionSetOne} onClick={handleToggle} />
+        <SkipButton label="Skip" onClick={handleToggle} />
+      </Container>
+    </>
   );
 }
 
