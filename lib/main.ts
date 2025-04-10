@@ -8,6 +8,7 @@ export { PageNotFound } from "./components/PageNotFound";
 export { QuestionForm } from "./components/QuestionForm";
 export { QuestionIconToolTip } from "./components/QuestionIconToolTip";
 export { QuizForm } from "./components/QuizForm";
+export { ShiftingCircles } from "./components/ShiftingCircles";
 export { SkipButton } from "./components/SkipButton";
 export { SpacerElement } from "./components/SpacerElement";
 export { SubmitButton } from "./components/SubmitButton";

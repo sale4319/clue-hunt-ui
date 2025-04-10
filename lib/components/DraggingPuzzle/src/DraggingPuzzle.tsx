@@ -7,15 +7,15 @@ interface DraggingPuzzleProps {
   handleUnlockNavigation?: () => void;
   mode?: string;
   onClick?: () => void;
-  darkMode?: boolean;
+  theme?: "light" | "dark";
 }
 
 function DraggingPuzzle({
   handleUnlockNavigation,
   mode = styles.pulse,
-  darkMode,
+  theme = "dark",
 }: DraggingPuzzleProps) {
-  const dark = darkMode ? styles.light : styles.dark;
+  // const dark = darkMode ? styles.light : styles.dark;
   const containerWidth = 150;
   const containerHeight = 100;
 
@@ -66,7 +66,10 @@ function DraggingPuzzle({
     <>
       <button
         id={styles.draggableButton}
-        className={[dark, buttonClickable ? mode : styles.clickable].join(" ")}
+        className={[
+          styles[theme],
+          buttonClickable ? mode : styles.clickable,
+        ].join(" ")}
         style={{ left: buttonPosition.x, top: buttonPosition.y }}
         onMouseDown={handleMouseDown}
         onClick={handleButtonClick}

@@ -385,6 +385,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@clue-hunt-ui/shifting-circles@workspace:lib/components/ShiftingCircles":
+  version: 0.0.0-use.local
+  resolution: "@clue-hunt-ui/shifting-circles@workspace:lib/components/ShiftingCircles"
+  languageName: unknown
+  linkType: soft
+
 "@clue-hunt-ui/skip-button@workspace:lib/components/SkipButton":
   version: 0.0.0-use.local
   resolution: "@clue-hunt-ui/skip-button@workspace:lib/components/SkipButton"
