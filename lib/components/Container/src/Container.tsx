@@ -3,13 +3,13 @@ import styles from "./Container.module.css";
 
 interface ContainerProps {
   children: React.ReactNode;
-  darkMode?: boolean;
+  theme: "light" | "dark" | undefined;
 }
 
-export const Container = ({ children, darkMode }: ContainerProps) => {
+export const Container = ({ children, theme = "dark" }: ContainerProps) => {
   return (
     <div className={styles.container}>
-      <GalaxyBackground darkMode={darkMode} />
+      <GalaxyBackground theme={theme} />
       <article>
         <section className={styles.sectionContainer}>{children}</section>
       </article>

@@ -1,16 +1,14 @@
-'use client"';
+"use client";
 
-import { DarkModeButton } from "@clue-hunt-ui/dark-mode-button";
 import messages from "./messages.json";
 import styles from "./AppMenu.module.css";
 
 type AppMenuProps = {
-  darkMode: boolean;
-  toggleDarkMode: () => void;
+  children: React.ReactNode;
+  theme?: "light" | "dark";
 };
 
-export const AppMenu = ({ darkMode, toggleDarkMode }: AppMenuProps) => {
-  const mode = darkMode ? styles.dark : styles.light;
+export const AppMenu = ({ theme = "dark", children }: AppMenuProps) => {
   return (
     <nav className={styles.menu}>
       <input
@@ -20,7 +18,7 @@ export const AppMenu = ({ darkMode, toggleDarkMode }: AppMenuProps) => {
         id="menu-open"
       />
       <label
-        className={[styles.menuOpenButton, mode].join(" ")}
+        className={[styles.menuOpenButton, styles[theme]].join(" ")}
         htmlFor="menu-open"
       >
         <span className={[styles.hamburger, styles.hamburger1].join(" ")} />
@@ -43,9 +41,7 @@ export const AppMenu = ({ darkMode, toggleDarkMode }: AppMenuProps) => {
       >
         <i className={styles.trelloButton} />
       </a>
-      <div className={styles.menuItem}>
-        <DarkModeButton toggleDarkMode={toggleDarkMode} />
-      </div>
+      <div className={styles.menuItem}>{children}</div>
     </nav>
   );
 };

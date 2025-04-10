@@ -4,20 +4,19 @@ interface TitleProps {
   label: string;
   color?: string;
   titleSize?: "small" | "medium" | "large";
-  theme?: boolean;
+  theme?: "light" | "dark";
 }
 
 export const Title = ({
   color,
   label = "Your title goes here",
   titleSize = "medium",
-  theme,
+  theme = "dark",
   ...props
 }: TitleProps) => {
-  const mode = theme ? styles.dark : styles.light;
   return (
     <header
-      className={[styles.title, styles[titleSize], mode].join(" ")}
+      className={[styles.title, styles[titleSize], styles[theme]].join(" ")}
       style={{ color }}
       {...props}
     >

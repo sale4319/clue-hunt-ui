@@ -45,11 +45,11 @@
 }
 
 #draggableButton.clickable.light {
-  color: #fff;
+  color: #282c34;
 }
 
 #draggableButton.clickable.dark {
-  color: #282c34;
+  color: #fff;
 }
 
 .cornerShine {

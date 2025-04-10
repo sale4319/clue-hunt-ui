@@ -11,6 +11,7 @@ import {
   QuestionIconToolTip,
   SkipButton,
   QuestionForm,
+  DraggingPuzzle,
 } from "clue-hunt-ui";
 import { questionSetOne } from "./quizSets";
 
@@ -26,7 +27,9 @@ function App() {
   return (
     <>
       <AppMenu />
-      <Container>
+
+      <Container theme={"dark"}>
+        <DraggingPuzzle handleUnlockNavigation={handleToggle} theme={"dark"} />
         <QuestionForm />
         <QuestionIconToolTip size="large" />
         <UnlockToolTip />

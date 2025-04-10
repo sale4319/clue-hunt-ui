@@ -6,12 +6,10 @@ interface SkipButtonProps {
 }
 
 export const SkipButton = ({ label = "skip", ...props }: SkipButtonProps) => {
-  const darkMode = false;
-  const mode = darkMode ? styles.dark : styles.light;
   return (
     <button
       type="button"
-      className={[styles.skipPosition, styles.skipButton, mode].join(" ")}
+      className={[styles.skipPosition, styles.skipButton].join(" ")}
       {...props}
     >
       <i className={styles.skipButton} />
