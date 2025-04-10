@@ -1,3 +1,5 @@
+"use client";
+
 import { ChangeEvent, FormEvent, useState, useEffect } from "react";
 import { QuestionIconToolTip } from "@clue-hunt-ui/question-icon-tooltip";
 import { SubmitButton } from "@clue-hunt-ui/sumit-button";
@@ -22,7 +24,7 @@ type QuestionFormProps = {
   secondHint?: string;
   secondPlaceholder?: string;
   successMessage?: string;
-  darkMode?: boolean;
+  theme?: "light" | "dark";
 };
 
 export const QuestionForm = ({
@@ -35,7 +37,7 @@ export const QuestionForm = ({
   secondHint = "What is your second hint?",
   secondPlaceholder = "What is your second placeholder?",
   successMessage = "What is your success message?",
-  darkMode,
+  theme = "dark",
 }: QuestionFormProps) => {
   const initialValues: FormValues = { answerOne: "", answerTwo: "" };
   const [formValues, setFormValues] = useState<FormValues>(initialValues);
@@ -44,7 +46,6 @@ export const QuestionForm = ({
     [key in keyof FormValues]?: boolean;
   }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const mode = darkMode ? styles.dark : styles.light;
 
   const submit = () => {
     console.log(formValues);
@@ -109,11 +110,11 @@ export const QuestionForm = ({
       {Object.keys(formErrors).length === 0 && isSubmitting && (
         <span className={styles.successMessage}>{successMessage}</span>
       )}
-      <div className={[styles.formContainer, mode].join(" ")}>
+      <div className={[styles.formContainer, styles[theme]].join(" ")}>
         <form onSubmit={handleSubmit} noValidate>
           <div className={styles.formRow}>
             <label
-              className={[styles.formLabel, mode].join(" ")}
+              className={[styles.formLabel, styles[theme]].join(" ")}
               htmlFor="answerOne"
             >
               {firstQuestion}
@@ -144,7 +145,7 @@ export const QuestionForm = ({
 
           <div className={styles.formRow}>
             <label
-              className={[styles.formLabel, mode].join(" ")}
+              className={[styles.formLabel, styles[theme]].join(" ")}
               htmlFor="answerTwo"
             >
               {secondQuestion}

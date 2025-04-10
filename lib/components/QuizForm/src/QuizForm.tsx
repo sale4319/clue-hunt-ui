@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect, Fragment } from "react";
 import { Button } from "@clue-hunt-ui/button";
 
@@ -11,7 +13,7 @@ type QuizProps = {
     correctAnswerIndex: number;
   }[];
   handleUnlock?: () => void;
-  darkMode?: boolean;
+  theme?: "light" | "dark";
 };
 
 type QuestionProps = {
@@ -104,7 +106,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
 
 // Quiz Component
 const QuizForm: React.FC<QuizProps> = ({
-  darkMode,
+  theme = "dark",
   questions = [],
   handleUnlock,
 }) => {
@@ -112,8 +114,6 @@ const QuizForm: React.FC<QuizProps> = ({
   const [answerStatus, setAnswerStatus] = useState<boolean | null>(null);
   const [correctAnswerCount, setCorrectAnswerCount] = useState<number>(0);
   const [quizComplete, setQuizComplete] = useState<boolean>(false);
-
-  const mode = darkMode ? styles.dark : styles.light;
 
   useEffect(() => {
     setAnswerStatus(null);
@@ -141,7 +141,7 @@ const QuizForm: React.FC<QuizProps> = ({
 
   if (questionIndex === null) {
     return (
-      <div className={[styles.quiz, mode].join(" ")}>
+      <div className={[styles.quiz, styles[theme]].join(" ")}>
         <h1>{messages.TITLE}</h1>
         <p>{messages.DESCRIPTION}</p>
         <p>
@@ -157,7 +157,7 @@ const QuizForm: React.FC<QuizProps> = ({
   }
 
   return (
-    <div className={[styles.quiz, mode].join(" ")}>
+    <div className={[styles.quiz, styles[theme]].join(" ")}>
       {quizComplete ? (
         <Fragment>
           <h1>{messages.TITLE_COMPLETE}</h1>

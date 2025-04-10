@@ -1,17 +1,18 @@
 import styles from "./GalaxyBackground.module.css";
 
 type GalaxyBackgroundProps = {
-  darkMode?: boolean;
+  theme: "light" | "dark" | undefined;
 };
 
-export const GalaxyBackground = ({ darkMode }: GalaxyBackgroundProps) => {
-  const mode = darkMode ? styles.layerDark : styles.layerLight;
+export const GalaxyBackground = ({ theme }: GalaxyBackgroundProps) => {
+  const mode = theme === "dark" ? styles.layerDark : styles.layerLight;
   return (
     <div>
       <div
-        className={[styles.bg, darkMode ? styles.bgDark : styles.bgLight].join(
-          " "
-        )}
+        className={[
+          styles.bg,
+          theme === "dark" ? styles.bgDark : styles.bgLight,
+        ].join(" ")}
       />
       <div className={styles.starField}>
         <div className={[styles.layer, mode].join(" ")} />

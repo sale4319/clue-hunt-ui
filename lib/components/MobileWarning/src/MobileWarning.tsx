@@ -1,5 +1,3 @@
-import { GalaxyBackground } from "../../GalaxyBackground/src/GalaxyBackground";
-
 import messages from "./messages.json";
 import styles from "./MobileWarning.module.css";
 
@@ -12,7 +10,7 @@ export const MobileWarning = () => {
         darkMode ? styles.containerDark : styles.containerLight,
       ].join(" ")}
     >
-      {messages.MOBILE_VIEW} <GalaxyBackground />
+      {messages.MOBILE_VIEW}
     </div>
   );
 };

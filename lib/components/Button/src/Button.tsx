@@ -1,4 +1,4 @@
-'use client"';
+"use client";
 
 import styles from "./styles.module.css";
 
@@ -21,6 +21,7 @@ export function Button({
   backgroundColor,
   label,
   href,
+  onClick,
   ...props
 }: ButtonProps) {
   const toggleColor = primary
@@ -46,6 +47,7 @@ export function Button({
       href={href}
       className={buttonStyles}
       style={{ backgroundColor }}
+      onClick={onClick}
       {...props}
     >
       {label ?? "Unlocked"}

@@ -16,13 +16,3 @@
 .large {
   min-height: 200px;
 }
-
-.dark {
-  background-color: #282c34;
-  color: white;
-}
-
-.light {
-  background-color: white;
-  color: #282c34;
-}
