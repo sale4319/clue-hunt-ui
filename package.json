@@ -1,6 +1,6 @@
 {
   "name": "clue-hunt-ui",
-  "version": "0.4.11",
+  "version": "0.4.12",
   "type": "module",
   "packageManager": "yarn@4.9.2",
   "workspaces": [
@@ -34,7 +34,7 @@
     "release:beta": "standard-version --prerelease beta",
     "release:alpha": "standard-version --prerelease alpha",
     "release:interactive": "./scripts/release.sh",
-    "publish:auto": "yarn release && yarn publish && git push --follow-tags origin main"
+    "publish:auto": "yarn release && npm publish --access public && git push --follow-tags origin $(git branch --show-current)"
   },
   "peerDependencies": {
     "react": "^18.2.0",
