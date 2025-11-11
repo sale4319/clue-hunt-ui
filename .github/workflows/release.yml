@@ -44,6 +44,10 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+    permissions:
+      contents: write
+      packages: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -96,6 +100,7 @@ jobs:
       - name: Push release
         if: steps.release.outputs.release-created == 'true'
         run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           git push --follow-tags origin ${{ github.ref_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
