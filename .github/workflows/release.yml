@@ -105,8 +105,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Configure npm authentication
+        if: steps.release.outputs.release-created == 'true'
+        run: |
+          yarn config set npmRegistryServer "https://registry.npmjs.org"
+          yarn config set npmAuthToken ${{ secrets.NPM_TOKEN }}
+
       - name: Publish to NPM
         if: steps.release.outputs.release-created == 'true'
-        run: yarn publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: yarn npm publish --access public

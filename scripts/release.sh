@@ -81,7 +81,7 @@ git push origin "v$NEW_VERSION"
 
 # Publish to npm
 echo "📦 Publishing to npm..."
-yarn publish
+yarn npm publish --access public
 
 echo "✅ Successfully released version $NEW_VERSION!"
 echo "🔗 Check it out: https://www.npmjs.com/package/clue-hunt-ui"
