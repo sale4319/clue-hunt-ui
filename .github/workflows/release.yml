@@ -111,6 +111,10 @@ jobs:
           yarn config set npmRegistryServer "https://registry.npmjs.org"
           yarn config set npmAuthToken ${{ secrets.NPM_TOKEN }}
 
+      - name: Build project for publishing
+        if: steps.release.outputs.release-created == 'true'
+        run: yarn build
+
       - name: Publish to NPM
         if: steps.release.outputs.release-created == 'true'
         run: yarn npm publish --access public

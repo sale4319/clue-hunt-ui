@@ -1,6 +1,6 @@
 {
   "name": "clue-hunt-ui",
-  "version": "0.4.16",
+  "version": "0.4.17",
   "type": "module",
   "packageManager": "yarn@4.9.2",
   "workspaces": [
@@ -25,7 +25,7 @@
     "prepublishOnly": "yarn build",
     "preversion": "yarn lint && yarn build",
     "version": "git add -A package.json yarn.lock",
-    "postversion": "git push && git push --tags && yarn npm publish --access public",
+    "postversion": "echo 'Version updated successfully'",
     "release": "standard-version",
     "release:first": "standard-version --first-release",
     "release:patch": "standard-version --release-as patch",

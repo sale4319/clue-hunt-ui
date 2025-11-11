@@ -41,19 +41,19 @@ read -p "Enter your choice (1-5): " choice
 
 case $choice in
     1)
-        VERSION_TYPE="patch"
+        RELEASE_TYPE="--release-as patch"
         ;;
     2)
-        VERSION_TYPE="minor"
+        RELEASE_TYPE="--release-as minor"
         ;;
     3)
-        VERSION_TYPE="major"
+        RELEASE_TYPE="--release-as major"
         ;;
     4)
-        VERSION_TYPE="prerelease --preid=beta"
+        RELEASE_TYPE="--prerelease beta"
         ;;
     5)
-        VERSION_TYPE="prerelease --preid=alpha"
+        RELEASE_TYPE="--prerelease alpha"
         ;;
     *)
         echo "❌ Invalid choice. Exiting."
@@ -61,23 +61,16 @@ case $choice in
         ;;
 esac
 
-# Create new version
+# Create new version using standard-version
 echo "📝 Creating new version..."
-yarn version --new-version $VERSION_TYPE --no-git-tag-version
+yarn standard-version $RELEASE_TYPE
 
 # Get the new version
 NEW_VERSION=$(node -p "require('./package.json').version")
 
-# Create git commit and tag
-echo "🏷️  Creating git commit and tag..."
-git add package.json yarn.lock
-git commit -m "chore(release): v$NEW_VERSION"
-git tag "v$NEW_VERSION"
-
 # Push changes
 echo "⬆️  Pushing changes..."
-git push origin $CURRENT_BRANCH
-git push origin "v$NEW_VERSION"
+git push --follow-tags origin $CURRENT_BRANCH
 
 # Publish to npm
 echo "📦 Publishing to npm..."
