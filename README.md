@@ -42,7 +42,6 @@ function App() {
 - **Button**: Interactive buttons with multiple styles and effects
 - **Container**: Layout wrapper with galaxy background
 - **SkipButton**: Skip functionality with disabled states
-- **DarkModeButton**: Theme switching component
 - **GalaxyBackground**: Animated space-themed background
 - **And many more...**
 
