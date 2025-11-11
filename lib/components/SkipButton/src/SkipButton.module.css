@@ -31,4 +31,5 @@
 .skipButton:disabled:hover {
   transform: none;
   transition: none;
+  cursor: not-allowed;
 }
