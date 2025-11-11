@@ -6,8 +6,5 @@
     "component",
     "shareable"
   ],
-  "dependencies": {
-    "@clue-hunt-ui/dark-mode-button": "^0.1.0"
-  },
   "main": "./src/index.ts"
 }
