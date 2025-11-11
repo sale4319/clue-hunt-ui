@@ -1,4 +1,4 @@
-name: Release and Publish
+name: Test, Release and Publish
 
 on:
   push:
@@ -43,7 +43,7 @@ jobs:
   release:
     needs: test
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
     steps:
       - uses: actions/checkout@v4
         with:
@@ -78,14 +78,30 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Create Release
+      - name: Try to create release
+        id: release
         run: |
-          yarn release
-          git push --follow-tags origin main
+          # Run standard-version to create a new release if needed
+          if yarn release; then
+            echo "release-created=true" >> $GITHUB_OUTPUT
+            echo "New release created successfully"
+          else
+            echo "release-created=false" >> $GITHUB_OUTPUT
+            echo "No release needed or release failed"
+            exit 0
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push release
+        if: steps.release.outputs.release-created == 'true'
+        run: |
+          git push --follow-tags origin ${{ github.ref_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish to NPM
-        run: yarn publish
+        if: steps.release.outputs.release-created == 'true'
+        run: yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
