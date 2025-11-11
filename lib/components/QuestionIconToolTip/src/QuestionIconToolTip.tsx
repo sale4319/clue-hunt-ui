@@ -5,14 +5,12 @@ import QuestionIcon from "../../assets/question-icon.svg";
 import styles from "./QuestionIconToolTip.module.css";
 
 interface QuestionIconToolTipProps {
-  submit?: boolean;
   content?: string;
   size?: "small" | "medium" | "large";
   onClick?: () => void;
 }
 
 export const QuestionIconToolTip = ({
-  submit = false,
   size = "medium",
   content = "Tooltip text",
   ...props

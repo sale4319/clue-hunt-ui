@@ -23,11 +23,11 @@ git pull origin $CURRENT_BRANCH
 
 # Run tests and linting
 echo "🔍 Running linting..."
-npm run lint
+yarn lint
 
 # Build the project
 echo "🔨 Building project..."
-npm run build
+yarn build
 
 # Ask user for version type
 echo "📦 What type of release is this?"
@@ -63,14 +63,14 @@ esac
 
 # Create new version
 echo "📝 Creating new version..."
-npm version $VERSION_TYPE --no-git-tag-version
+yarn version --new-version $VERSION_TYPE --no-git-tag-version
 
 # Get the new version
 NEW_VERSION=$(node -p "require('./package.json').version")
 
 # Create git commit and tag
 echo "🏷️  Creating git commit and tag..."
-git add package.json
+git add package.json yarn.lock
 git commit -m "chore(release): v$NEW_VERSION"
 git tag "v$NEW_VERSION"
 
@@ -81,7 +81,7 @@ git push origin "v$NEW_VERSION"
 
 # Publish to npm
 echo "📦 Publishing to npm..."
-npm publish
+yarn publish
 
 echo "✅ Successfully released version $NEW_VERSION!"
 echo "🔗 Check it out: https://www.npmjs.com/package/clue-hunt-ui"

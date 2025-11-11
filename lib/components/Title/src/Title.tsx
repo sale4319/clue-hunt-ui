@@ -1,7 +1,8 @@
+import { ReactNode } from "react";
 import styles from "./Title.module.css";
 
 interface TitleProps {
-  children?: any;
+  children?: ReactNode;
   label?: string;
   color?: string;
   titleSize?: "xs" | "small" | "medium" | "large" | "xl";
