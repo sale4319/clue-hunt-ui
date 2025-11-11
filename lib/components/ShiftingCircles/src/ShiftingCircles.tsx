@@ -79,6 +79,7 @@ function ShiftingCircles({
 
   useEffect(() => {
     clickAttempts === 3 && handleUnlockNavigation && handleUnlockNavigation();
+    //eslint-disable-next-line
   }, [circles]);
 
   useEffect(() => {

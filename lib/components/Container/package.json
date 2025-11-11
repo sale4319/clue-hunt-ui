@@ -1,10 +1,16 @@
 {
   "name": "@clue-hunt-ui/container",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "keywords": [
     "component",
-    "shareable"
+    "shareable",
+    "responsive",
+    "accessibility",
+    "layout",
+    "container",
+    "galaxy",
+    "ui"
   ],
   "dependencies": {
     "@clue-hunt-ui/galaxy-background": "^0.1.0"

@@ -4,16 +4,13 @@ import { useState } from "react";
 import {
   AppMenu,
   Button,
-  QuizForm,
   Container,
   UnlockToolTip,
   SubmitButton,
   QuestionIconToolTip,
   SkipButton,
-  QuestionForm,
   DraggingPuzzle,
 } from "clue-hunt-ui";
-import { questionSetOne } from "./quizSets";
 
 import "./App.css";
 
@@ -30,12 +27,10 @@ function App() {
 
       <Container theme={"dark"}>
         <DraggingPuzzle handleUnlockNavigation={handleToggle} theme={"dark"} />
-        <QuestionForm />
         <QuestionIconToolTip size="large" />
         <UnlockToolTip />
         <SubmitButton label="Submit" submit />
         <Button label="Count" primary={isLocked} isLocked={isLocked} />
-        <QuizForm questions={questionSetOne} onClick={handleToggle} />
         <SkipButton label="Skip" onClick={handleToggle} />
       </Container>
     </>

@@ -33,14 +33,6 @@ export const AppMenu = ({ theme = "dark", children }: AppMenuProps) => {
       >
         <i className={styles.githubButton} />
       </a>
-      <a
-        href={`${messages.TRELLO}`}
-        className={styles.menuItem}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i className={styles.trelloButton} />
-      </a>
       <div className={styles.menuItem}>{children}</div>
     </nav>
   );
