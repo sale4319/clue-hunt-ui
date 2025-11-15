@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.19](https://github.com/sale4319/clue-hunt-ui/compare/v0.4.18...v0.4.19) (2025-11-15)
+
+
+### ✨ Features
+
+* component improvements ([#7](https://github.com/sale4319/clue-hunt-ui/issues/7)) ([2621211](https://github.com/sale4319/clue-hunt-ui/commit/262121163f9f8f36595eae27dedec5f370610543))
+
 ### [0.4.18](https://github.com/sale4319/clue-hunt-ui/compare/v0.4.16...v0.4.18) (2025-11-11)
 
 
