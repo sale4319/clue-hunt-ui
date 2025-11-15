@@ -11,7 +11,6 @@ export const SkipIcon = ({ className }: SkipIconProps) => {
       aria-hidden="true"
       width="100%"
       height="100%"
-      style={{ color: "inherit" }}
     >
       <path
         fill="currentColor"

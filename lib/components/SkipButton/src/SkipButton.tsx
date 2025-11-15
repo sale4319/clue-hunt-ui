@@ -8,8 +8,12 @@ interface SkipButtonProps {
 
 export const SkipButton = ({ theme = "dark", ...props }: SkipButtonProps) => {
   return (
-    <button type="button" className={styles.skipButton} {...props}>
-      <SkipIcon className={styles[theme]} />
+    <button
+      type="button"
+      className={[styles.skipButton, styles[theme]].join(" ")}
+      {...props}
+    >
+      <SkipIcon />
     </button>
   );
 };
