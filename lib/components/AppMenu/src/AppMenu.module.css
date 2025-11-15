@@ -143,13 +143,3 @@
   border: none;
   cursor: pointer;
 }
-
-.trelloButton {
-  background: transparent no-repeat center;
-  content: url("../../assets/trello.svg");
-  background-size: 35px 35px;
-  width: 35px;
-  height: 35px;
-  border: none;
-  cursor: pointer;
-}

@@ -23,15 +23,19 @@ function App() {
 
   return (
     <>
-      <AppMenu />
-
-      <Container theme={"dark"}>
-        <DraggingPuzzle handleUnlockNavigation={handleToggle} theme={"dark"} />
+      <AppMenu theme={"light"} />
+      <Container theme={"light"}>
+        <DraggingPuzzle handleUnlockNavigation={handleToggle} theme={"light"} />
         <QuestionIconToolTip size="large" />
         <UnlockToolTip />
-        <SubmitButton label="Submit" submit />
-        <Button label="Count" primary={isLocked} isLocked={isLocked} />
-        <SkipButton label="Skip" onClick={handleToggle} />
+        <SubmitButton label="Submit" submit theme={"light"} />
+        <Button
+          label="Count"
+          primary={isLocked}
+          isLocked={isLocked}
+          theme={"light"}
+        />
+        <SkipButton label="Skip" onClick={handleToggle} theme={"dark"} />
       </Container>
     </>
   );
