@@ -1,17 +1,15 @@
+import { SkipIcon } from "../../assets/SkipIcon";
 import styles from "./SkipButton.module.css";
 
 interface SkipButtonProps {
   onClick?: () => void;
+  theme?: string;
 }
 
-export const SkipButton = ({ ...props }: SkipButtonProps) => {
+export const SkipButton = ({ theme = "dark", ...props }: SkipButtonProps) => {
   return (
-    <button
-      type="button"
-      className={[styles.skipPosition, styles.skipButton].join(" ")}
-      {...props}
-    >
-      <i className={styles.skipButton} />
+    <button type="button" className={styles.skipButton} {...props}>
+      <SkipIcon className={styles[theme]} />
     </button>
   );
 };

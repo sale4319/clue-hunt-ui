@@ -1,18 +1,25 @@
-.skipPosition {
+.skipButton {
   position: absolute;
   top: 55px;
   right: 95px;
   margin-top: 0;
-}
-
-.skipButton {
-  background: transparent no-repeat center;
-  content: url("../../assets/skip.svg");
-  background-size: 35px 35px;
   width: 35px;
   height: 35px;
+  padding: 0;
+  background: transparent;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.light {
+  filter: invert(0.3) sepia(1) saturate(2) hue-rotate(280deg);
+}
+
+.dark {
+  filter: invert(0.7) sepia(1) saturate(2) hue-rotate(170deg);
 }
 
 .skipButton:hover {
