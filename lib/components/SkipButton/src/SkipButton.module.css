@@ -15,11 +15,11 @@
 }
 
 .light {
-  filter: invert(0.3) sepia(1) saturate(2) hue-rotate(280deg);
+  color: #e91e63;
 }
 
 .dark {
-  filter: invert(0.7) sepia(1) saturate(2) hue-rotate(170deg);
+  color: #61dafb;
 }
 
 .skipButton:hover {
