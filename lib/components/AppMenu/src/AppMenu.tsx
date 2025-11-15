@@ -1,5 +1,6 @@
 "use client";
 
+import { GithubIcon } from "../../assets/GithubIcon";
 import messages from "./messages.json";
 import styles from "./AppMenu.module.css";
 
@@ -27,13 +28,15 @@ export const AppMenu = ({ theme = "dark", children }: AppMenuProps) => {
       </label>
       <a
         href={`${messages.GITHUB}`}
-        className={styles.menuItem}
+        className={[styles.menuItem, styles[theme]].join(" ")}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <i className={styles.githubButton} />
+        <GithubIcon className={styles[theme]} />
       </a>
-      <div className={styles.menuItem}>{children}</div>
+      <div className={[styles.menuItem, styles[theme]].join(" ")}>
+        {children}
+      </div>
     </nav>
   );
 };
