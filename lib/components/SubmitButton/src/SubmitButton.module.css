@@ -1,4 +1,5 @@
 .buttonSubmit {
+  font-style: inherit;
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -14,13 +15,13 @@
   background: transparent;
 }
 
-.buttonSubmitBlue {
+.buttonSubmitDefault {
   color: black;
   background: #e8e8e8;
   border-color: #75f8e2;
 }
 
-.buttonSubmitBlue:hover {
+.buttonSubmitDefault:hover {
   z-index: 1;
   background: #6ad85c;
   border-color: #75f8e2;
