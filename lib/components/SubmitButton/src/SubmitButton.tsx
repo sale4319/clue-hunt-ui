@@ -6,7 +6,8 @@ interface SubmitButtonProps {
   size?: "small" | "medium" | "large";
   label: string;
   onClick?: () => void;
-  type?: "submit" | "button" | "reset" | undefined;
+  type?: "submit" | "button" | "reset";
+  className?: string;
 }
 
 export const SubmitButton = ({
@@ -14,13 +15,15 @@ export const SubmitButton = ({
   size = "medium",
   backgroundColor,
   label,
+  type = "submit",
+  className,
   ...props
 }: SubmitButtonProps) => {
-  const mode = submit ? styles.buttonSubmitBlue : styles.glowOnHover;
+  const mode = submit ? styles.buttonSubmitDefault : styles.glowOnHover;
   return (
     <button
-      type="submit"
-      className={[styles.buttonSubmit, styles[size], mode].join(" ")}
+      type={type}
+      className={[styles.buttonSubmit, className, styles[size], mode].join(" ")}
       style={{ backgroundColor }}
       {...props}
     >
