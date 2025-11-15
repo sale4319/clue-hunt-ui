@@ -16,16 +16,16 @@
   box-shadow: 0 0 30px 10px #e91e63;
 }
 
-.green {
+.yellow {
   border: 5px solid #fffc60;
   background-color: #fffc60;
   box-shadow: 0 0 30px 10px #ffa260;
 }
 
-.blue {
-  border: 5px solid #75d3f8;
-  background-color: #75d3f8;
-  box-shadow: 0 0 30px 10px #75f8e2;
+.green {
+  border: 5px solid #58f92f;
+  background-color: #58f92f;
+  box-shadow: 0 0 30px 10px #c2f875;
 }
 
 .circle:hover {

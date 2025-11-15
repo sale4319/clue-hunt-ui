@@ -26,8 +26,8 @@ function ShiftingCircles({
   const [circles, setCircles] = useState<Circle[]>(() => {
     return [
       { color: "red", x: 0, y: 0 },
+      { color: "yellow", x: 0, y: 0 },
       { color: "green", x: 0, y: 0 },
-      { color: "blue", x: 0, y: 0 },
     ];
   });
 
@@ -54,17 +54,17 @@ function ShiftingCircles({
       setClickOrder(["red"]);
     } else if (
       clickOrder.length === 1 &&
-      color === "green" &&
+      color === "yellow" &&
       clickOrder[0] === "red"
     ) {
-      setClickOrder(["red", "green"]);
+      setClickOrder(["red", "yellow"]);
     } else if (
       clickOrder.length === 2 &&
-      color === "blue" &&
+      color === "green" &&
       clickOrder[0] === "red" &&
-      clickOrder[1] === "green"
+      clickOrder[1] === "yellow"
     ) {
-      setClickOrder(["red", "green", "blue"]);
+      setClickOrder(["red", "yellow", "green"]);
       setMessage("Success! You solved it correctly.");
       setTimeout(() => {
         setMessage("");
